@@ -12,8 +12,8 @@ const NavbarComponents = () => {
                         <Nav.Link as={Link} href="/">Breaking News</Nav.Link>
                         <Nav.Link as={Link} href="/search">Search News</Nav.Link>
                         <NavDropdown title="Categories">
-                            {categorySlug.map((item) => (
-                                <NavDropdown.Item as={Link} href={`/categories/${item}`}>{item}</NavDropdown.Item>
+                            {categorySlug.map((item,index) => (
+                                <NavDropdown.Item key={index} as={Link} href={`/categories/${item}`}>{item}</NavDropdown.Item>
                             ))}
                         </NavDropdown>
                     </Nav>
